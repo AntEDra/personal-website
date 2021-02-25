@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+  <style>
+
+    h1,h2,p,dl {
+        font-family: 'Roboto', sans-serif;
+        padding: 25px;
+        text-align: center;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+    ul > li {
+        font-family: "Source Sans Pro", Helvetica, sans-serif;
+        font-size: 1.5em;
+        font-weight: 300;
+    }
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+  }
+  .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: auto;
+  }
+
+  footer {
+      background-color: #555;
+      color: white;
+      /*padding: 15px;*/
+  }
+  .row.content {height: 450px}
+
+
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">anthony drake</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/">home</a></li>
+        <li><a href="about">about</a></li>
+        <li><a href="projects">projects</a></li>
+    </ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+<div class="container">          
+  <img src="https://images.pexels.com/photos/1398050/pexels-photo-1398050.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" class="img-responsive"> 
+</div> 
+
+{% block content %}
+
+{% endblock %}
+<footer class="container-fluid text-center fixed-bottom">
+  <h5>Copyright Anthony Drake (2021) unless states otherwise</h5>
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</body>
+</html>
