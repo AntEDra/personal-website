@@ -1,1 +1,1 @@
-web: gunicorn personal-website.personal-website:app
+web: gunicorn personal-website:app
