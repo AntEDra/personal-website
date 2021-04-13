@@ -1,89 +1,109 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-    <title>{% block title %}{% endblock %}</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <title>{% block title %}{% endblock %}</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <style>
+      h1,h2,p,dl,a {
+         font-family: 'Roboto', sans-serif;
+         padding: 25px;
+         text-align: center;
+         max-width: 650px;
+         margin: 0 auto;
+      }
+      ul > li {
+         font-family: "Source Sans Pro", Helvetica, sans-serif;
+         font-size: 1.5em;
+         font-weight: 300;
+      }
+         footer {
+            background-color: #555;
+            color: white;
+            /*padding: 15px;*/
+         }
+         .row.content {height: 450px}
+         .carousel {
+            height: 650px;
+            margin-bottom: 60px;
+         }
+         .carousel .item {
+            width: 100%;
+            height: 650px;
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+         }
+         .carousel-inner > .item > img {
+         margin: 0 auto;
+      }
+      @media (min-width: 768px) {
+         .carousel-caption p {
+            margin-bottom: 20px;
+            font-size: 21px;
+            line-height: 1.4;
+         }
+      }
 
-  <style>
-
-    h1,h2,p,dl {
-        font-family: 'Roboto', sans-serif;
-        padding: 25px;
-        text-align: center;
-        max-width: 650px;
-        margin: 0 auto;
-    }
-    ul > li {
-        font-family: "Source Sans Pro", Helvetica, sans-serif;
-        font-size: 1.5em;
-        font-weight: 300;
-    }
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-  }
-  .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: auto;
-  }
-
-  footer {
-      background-color: #555;
-      color: white;
-      /*padding: 15px;*/
-  }
-  .row.content {height: 450px}
-
-
-</style>
+   </style>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+   <nav class="navbar navbar-default">
       <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">anthony drake</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="/">home</a></li>
-        <li><a href="about">about</a></li>
-        <li><a href="projects">projects</a></li>
-    </ul>
-</div><!-- /.navbar-collapse -->
-</div><!-- /.container-fluid -->
-</nav>
-<div class="container">          
-  <img src="https://images.pexels.com/photos/1398050/pexels-photo-1398050.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" class="img-responsive"> 
-</div> 
-
-{% block content %}
-
-{% endblock %}
-<footer class="container-fluid text-center fixed-bottom">
-  <h5>Copyright Anthony Drake (2021) unless states otherwise</h5>
-</footer>
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-</body>
-</html>
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">anthony drake</a>
+         </div>
+         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+               <li class="active"><a href="/">home <span class="sr-only">(current)</span></a></li>
+               <li><a href="about">about</a></li>
+               <li><a href="projects">projects</a></li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+   <section class="carousel-default">
+      <div id="carousel-default" class="carousel slide" data-ride="carousel">
+         <div class="carousel-inner" role="listbox">
+            <div class="item active">
+               <img src="https://scontent-iad3-1.cdninstagram.com/v/t51.2885-15/e35/118170241_3200699560051028_1808170210552169853_n.jpg?tp=1&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=108&_nc_ohc=k_gDxyZhrVIAX9G3B4G&edm=AP_V10EAAAAA&ccb=7-4&oh=0a1c0695e92faa79c161cbfcc8d0fe18&oe=6098FFFA&_nc_sid=4f375e" alt="First slide">
+            </div>
+            <div class="item">
+               <img src="https://scontent-iad3-1.cdninstagram.com/v/t51.2885-15/e35/93353322_544014106493626_6754624806775536549_n.jpg?tp=1&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=110&_nc_ohc=WGLyuMU2JDoAX8IVvIS&edm=AP_V10EAAAAA&ccb=7-4&oh=0b455af409aee150bed819f1eab6da91&oe=609A56C5&_nc_sid=4f375e" alt="Second slide">
+            </div>
+            <div class="item">
+               <img src="https://scontent-iad3-1.cdninstagram.com/v/t51.2885-15/e35/128932821_400730994454982_891958931362328962_n.jpg?tp=1&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=102&_nc_ohc=FM1EhuNItv8AX9b5F65&edm=AP_V10EAAAAA&ccb=7-4&oh=b35290b9ad04c85834c3bd6cf9ac58e1&oe=609BCFF6&_nc_sid=4f375e" alt="Third slide">
+            </div>
+            <div class="item">
+               <img src="https://scontent-iad3-1.cdninstagram.com/v/t51.2885-15/e35/104433562_316557369374121_4433990880013232555_n.jpg?tp=1&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=109&_nc_ohc=IZk94rfkpogAX-vhpRy&edm=AP_V10EAAAAA&ccb=7-4&oh=55e3570548b418f692d6acd7b07a8531&oe=609972AC&_nc_sid=4f375e" alt="Fourth slide">
+            </div>
+            <div class="item">
+               <img src="https://scontent-iad3-1.cdninstagram.com/v/t51.2885-15/e35/79757236_592083344859066_938492133432350316_n.jpg?tp=1&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=106&_nc_ohc=F26Yy9J_078AX9B9mPE&edm=AP_V10EAAAAA&ccb=7-4&oh=0abf00fe15bcf052d4fecf8cd6e6d6c8&oe=609A4746&_nc_sid=4f375e" alt="Fifth slide">
+            </div>
+         </div>
+         <a class="left carousel-control" href="#carousel-default" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+         </a>
+         <a class="right carousel-control" href="#carousel-default" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+         </a>
+      </div>
+   </section>
+   {% block content %}
+   {% endblock %}
+   <footer class="container-fluid text-center fixed-bottom">
+      <h5>Copyright Anthony Drake (2021) unless states otherwise</h5>
+   </footer>
+   </body>
+   </html>
